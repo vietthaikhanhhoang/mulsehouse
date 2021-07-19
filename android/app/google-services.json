@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "473198433852",
+    "project_id": "mulsehouse",
+    "storage_bucket": "mulsehouse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473198433852:android:9f043317c9e2b1ce77d539",
+        "android_client_info": {
+          "package_name": "com.app.mulsehouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473198433852-6fdjmq20rn4rt92pk4v2h5fn4k0dligb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4ApSaWQMfAV_eWRozhDtKUIRvuAdna4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473198433852-6fdjmq20rn4rt92pk4v2h5fn4k0dligb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "473198433852-uc3656mm0maf9m932rord3pdmjfeuasj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.mulsehouse"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
