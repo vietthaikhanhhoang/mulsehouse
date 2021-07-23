@@ -74,37 +74,6 @@ class detailproductState extends State<detailproduct> {
     });
   }
 
-  Widget widgetVideo(){
-    return Container(
-      margin: EdgeInsets.only(top: 16),
-      width: MediaQuery.of(context).size.width - 32,
-      height: MediaQuery.of(context).size.width * 9/16,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: _futreImage,
-          ),
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: videocontroller(),
-          ),
-          // videoPlayerController.value.isPlaying ? SizedBox(height: 0) : Container(
-          //   width: 50,
-          //   height: 50,
-          //   child: IgnorePointer(
-          //     child: Image(image: AssetImage("assets/play.png")),
-          //   ),
-          // )
-        ],
-      ),
-    );
-  }
-
   Widget videocontroller(){
     chewieController = ChewieController(
       showControls: false,

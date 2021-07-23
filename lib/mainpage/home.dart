@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mulsehouse/cell/horizontalproducts.dart';
 import 'package:mulsehouse/cell/productcell.dart';
 import 'package:mulsehouse/cell/productbigcell.dart';
 import 'package:mulsehouse/class/product.dart';
@@ -9,6 +10,8 @@ import 'package:mulsehouse/utils/global.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:mulsehouse/main.dart';
 import 'package:mulsehouse/eventbusfire/eventfire.dart';
+
+import '../testhome.dart';
 
 class home extends StatefulWidget {
   @override
@@ -105,7 +108,7 @@ class homeState extends State<home> {
         child: ListView.builder(
           padding: const EdgeInsets.all(0),
           itemCount: listProduct.length,
-          itemBuilder: (c, i) => i % 3 == 0 ? productbigcell(listProduct[i], isNightMode) : productcell(listProduct[i], isNightMode),
+          itemBuilder: (c, i) => i == 3 ? horizontalproducts() : i % 3 == 0 ? productbigcell(listProduct[i], isNightMode) : productcell(listProduct[i], isNightMode),
         )
     );
   }
