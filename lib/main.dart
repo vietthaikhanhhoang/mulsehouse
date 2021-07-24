@@ -1,7 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mulsehouse/mainpage/notificationpage/detailnotification.dart';
-import 'package:mulsehouse/testhome.dart';
+import 'package:mulsehouse/test/testHTML.dart';
+import 'package:mulsehouse/test/testhome.dart';
 
 import 'controls/alertconfirm.dart';
 import 'mainpage/home.dart';
@@ -121,7 +122,9 @@ class MyNavigationBarState extends State<MyNavigationBar> {
         child: AppBar(
           title: Text("MulseHouse"),
           leading: IconButton(icon: Icon(Icons.ac_unit), onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>testhome()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context)=>testHTML())
+            );
           },),
           actions: [
             Padding(
