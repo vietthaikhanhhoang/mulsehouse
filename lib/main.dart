@@ -125,7 +125,7 @@ class MyNavigationBarState extends State<MyNavigationBar> {
           title: Text("MulseHouse"),
           leading: IconButton(icon: Icon(Icons.ac_unit), onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context)=>plistnewspage())
+                MaterialPageRoute(builder: (context)=>listnewspage())
             );
           },),
           actions: [

@@ -12,7 +12,7 @@ import io.flutter.embedding.engine.plugins.util.GeneratedPluginRegister
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugins.GeneratedPluginRegistrant
+//import io.flutter.plugins.GeneratedPluginRegistrant
 
 import android.provider.Settings.*
 
@@ -50,6 +50,10 @@ class MainActivity : FlutterActivity() {
             if (call.method == "enablepush") {
                 val i = Intent(ACTION_SETTINGS)
                 startActivity(i)
+            } else  if (call.method == "showPhoto") {
+                Log.d("vietnb", "goi show photo")
+                var intent = Intent(this@MainActivity, ShowPhotoActivity::class.java)
+                startActivity(intent)
             } else {
                 result.notImplemented()
             }
