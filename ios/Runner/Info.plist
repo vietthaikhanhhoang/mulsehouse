@@ -10,10 +10,20 @@
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Cho phép ứng dụng sử dụng bluetooth?</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Cho phép ứng dụng sử dụng bluetooth?</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Lưu ảnh vào photo library?</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Lưu ảnh vào photo library?</string>
 	<key>CFBundleName</key>
 	<string>mulsehouse</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>&quot;Cho phép theo dõi&quot; giúp bạn đọc được tin tức cá nhân hóa tốt hơn.</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -82,8 +92,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>GADIsAdManagerApp</key>
+	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
 	<key>io.flutter.embedded_views_preview</key>
 	<true/>
 </dict>

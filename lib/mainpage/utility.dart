@@ -59,7 +59,7 @@ class utilityState extends State<utility>{
           color: isNightMode == true ? Colors.black : Colors.white,
           child: TabBarView(
             children: [
-              webviewpage(url:WEATHRER),
+              webviewpage(url:WEATHER),
               webviewpage(url:LOTTERY),
               webviewpage(url:GOLD),
             ],

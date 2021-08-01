@@ -3,9 +3,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
 // const String URL="http://172.16.0.38:2000";
-const String URL="http://192.168.55.105:2000";
+const String URL="http://192.168.55.103:2000";
 
-const String WEATHRER = "https://www.24h.com.vn/du-bao-thoi-tiet-c568.html";
+const String WEATHER = "https://www.24h.com.vn/du-bao-thoi-tiet-c568.html";
 const String LOTTERY = "https://xosodaiphat.com/xsmb-xo-so-mien-bac.html";
 const String GOLD = "https://www.24h.com.vn/gia-vang-hom-nay-c425.html";
 // const String POLICY = "http://192.168.0.102:2000/policy";

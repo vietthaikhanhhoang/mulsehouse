@@ -6,6 +6,8 @@ import 'package:mulsehouse/test/testhome.dart';
 
 import 'controls/alertconfirm.dart';
 import 'mainpage/home.dart';
+import 'mainpage/newspage/listnewspage.dart';
+import 'mainpage/newspage/plistnewspage.dart';
 import 'mainpage/search.dart';
 import 'mainpage/setting.dart';
 import 'mainpage/utility.dart';
@@ -123,7 +125,7 @@ class MyNavigationBarState extends State<MyNavigationBar> {
           title: Text("MulseHouse"),
           leading: IconButton(icon: Icon(Icons.ac_unit), onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context)=>testHTML())
+                MaterialPageRoute(builder: (context)=>plistnewspage())
             );
           },),
           actions: [

@@ -55,7 +55,11 @@ dev_dependencies:
   chewie: ^1.2.2
   carousel_slider: ^4.0.0
 
+  # for parse html string
   html: ^0.15.0
+  # for widget
+  flutter_html: ^2.1.0
+  protobuf: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

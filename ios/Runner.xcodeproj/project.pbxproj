@@ -10,6 +10,8 @@
 		0610D41C269AA05700BDEB92 /* ExtensionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610D41B269AA05700BDEB92 /* ExtensionClass.swift */; };
 		0610D424269AAECF00BDEB92 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610D422269AAECF00BDEB92 /* MainViewController.swift */; };
 		0610D425269AAECF00BDEB92 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610D423269AAECF00BDEB92 /* MainViewController.xib */; };
+		064DA7BB26B3BD35000A8024 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DA7BA26B3BD35000A8024 /* APIRequest.swift */; };
+		064DA7BE26B3BF25000A8024 /* product.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DA7BD26B3BF25000A8024 /* product.pb.swift */; };
 		069079A92699DE9A00C1895A /* WebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069079A72699DE9A00C1895A /* WebKitViewController.swift */; };
 		069079AA2699DE9A00C1895A /* WebKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 069079A82699DE9A00C1895A /* WebKitViewController.xib */; };
 		06DB285F269ADCB500986AB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06DB285E269ADCB500986AB9 /* GoogleService-Info.plist */; };
@@ -39,6 +41,8 @@
 		0610D41B269AA05700BDEB92 /* ExtensionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionClass.swift; sourceTree = "<group>"; };
 		0610D422269AAECF00BDEB92 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0610D423269AAECF00BDEB92 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		064DA7BA26B3BD35000A8024 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		064DA7BD26B3BF25000A8024 /* product.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = product.pb.swift; sourceTree = "<group>"; };
 		069079A72699DE9A00C1895A /* WebKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitViewController.swift; sourceTree = "<group>"; };
 		069079A82699DE9A00C1895A /* WebKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebKitViewController.xib; sourceTree = "<group>"; };
 		06DB285E269ADCB500986AB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -89,6 +93,22 @@
 				0610D423269AAECF00BDEB92 /* MainViewController.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		064DA7B926B3BCBE000A8024 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				064DA7BA26B3BD35000A8024 /* APIRequest.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		064DA7BC26B3BEEC000A8024 /* Protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				064DA7BD26B3BF25000A8024 /* product.pb.swift */,
+			);
+			path = Protobuf;
 			sourceTree = "<group>";
 		};
 		069079A62699DE5B00C1895A /* CustomView */ = {
@@ -144,6 +164,8 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				064DA7BC26B3BEEC000A8024 /* Protobuf */,
+				064DA7B926B3BCBE000A8024 /* Api */,
 				06DB2860269ADCDE00986AB9 /* Runner.entitlements */,
 				0610D421269AAEB700BDEB92 /* Main */,
 				0610D41A269AA02200BDEB92 /* Library */,
@@ -322,6 +344,8 @@
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				0610D41C269AA05700BDEB92 /* ExtensionClass.swift in Sources */,
 				0610D424269AAECF00BDEB92 /* MainViewController.swift in Sources */,
+				064DA7BB26B3BD35000A8024 /* APIRequest.swift in Sources */,
+				064DA7BE26B3BF25000A8024 /* product.pb.swift in Sources */,
 				069079A92699DE9A00C1895A /* WebKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

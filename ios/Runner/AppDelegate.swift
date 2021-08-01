@@ -1,5 +1,7 @@
 import UIKit
 import Flutter
+import SKPhotoBrowser
+import SwiftProtobuf
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -8,10 +10,10 @@ import Flutter
     
     func solutionPresent(){
         if let controller = self.window.rootViewController as? FlutterBinaryMessenger{
-            let nativeChannel = FlutterMethodChannel.init(name: "flutterplugins.javatpoint.com/enablepush", binaryMessenger: controller)
-            nativeChannel.setMethodCallHandler {(call: FlutterMethodCall, result: FlutterResult) -> Void in
+            let nativeChannel = FlutterMethodChannel.init(name: "flutterplugins.javatpoint.com/interaction", binaryMessenger: controller)
+            nativeChannel.setMethodCallHandler {(call: FlutterMethodCall, resultFlutter: FlutterResult) -> Void in
+                NSLog("vao day da")
                     if (call.method == "enablepush") {
-                        NSLog("Lam cai mie gi thi lam:")
                         if let args = call.arguments as? Dictionary<String, Any>,
                            let url = args["url"] as? String{
                             NSLog("url: %@", url)
@@ -32,11 +34,91 @@ import Flutter
                             }
                         }
                         else {
-                            result(FlutterError.init(code: "bad args", message: nil, details: nil))
+                            resultFlutter(FlutterError.init(code: "bad args", message: nil, details: nil))
+                        }
+                    }
+                    else if (call.method == "showPhoto") {
+                        if let args = call.arguments as? Dictionary<String, Any>,
+                           let content = args["content"] as? String, let array = args["array"] as? NSArray{
+                            self.showImage(array: array, content: content)
+                        }
+                    } else if (call.method == "getproduct") {
+                        if let args = call.arguments as? Dictionary<String, Any>,
+                           let url = args["url"] as? String{
+                            NSLog("url: %@", url)
+//                            result("hahahaha")
+                            
+                            var product = Product()
+                            product.name = "tin toi di"
+                            product.title = "ok ong"
+                            product.content = "an sua chua"
+                            
+                            do {
+                                let jsonData: Data = try product.serializedData()
+                                let giaima:Product = try Product.init(serializedData: jsonData)
+                                
+                                print(giaima.content)
+                                
+                                resultFlutter(jsonData)
+                                
+                                
+                            }
+                            catch let error {
+                                
+                            }
+                            
+                            
+                            
+                            
+                                //APIRequest.sharedInstance.getProduct { result, error in
+//                                    if let data = result as? String {
+//                                        do {
+//                                            let product = try Product(jsonString: data)
+//                                            print("den day luon jsonString xong")
+//                                        }
+//                                        catch let error {
+//                                            print(error.localizedDescription)
+//                                            resultFlutter("hahahaha")
+//                                        }
+//                                    }
+                                //}
+                                
+//                            )
+                            
+                            
+                            
+                        }
+                        else {
+                            resultFlutter(FlutterError.init(code: "bad args", message: nil, details: nil))
                         }
                     }
                 }
         }
+    }
+    
+    func showImage(array:NSArray, content: String) {
+        print("goi vao day roi")
+        
+        var images = [SKPhoto]()
+        for i in 0..<array.count {
+            if let url = array[i] as? String {
+                let photo = SKPhoto.photoWithImageURL(url)
+                photo.shouldCachePhotoURLImage = false // you can use image cache by true(NSCache)
+                images.append(photo)
+            }
+        }
+
+        // 2. create PhotoBrowser Instance, and present.
+        let browser = SKPhotoBrowser(photos: images)
+        
+        var index = 0
+        if (array.index(of: content) > 0) {
+            index = array.index(of: content)
+        }
+        browser.initializePageIndex(index)
+                
+        let flutterViewController : FlutterViewController = self.window?.rootViewController as! FlutterViewController
+        flutterViewController.present(browser, animated: true, completion: {})
     }
     
     func solutionPush(){

@@ -29,8 +29,9 @@ class detailproductState extends State<detailproduct> {
   double positionVideo = 0;
   double volume = 1;
 
-  bool isHiddenControl = true;
+  bool isHiddenControl = false;
   bool isFullScreen = false;
+  bool isClickedVideo = false;
 
   @override
   void dispose() {
@@ -153,9 +154,7 @@ class detailproductState extends State<detailproduct> {
 
 
       return Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 0,
-        ),
+        appBar: isFullScreen ? null : AppBar(),
         body: Container(
           child: SingleChildScrollView(
             child: Stack(
@@ -170,6 +169,7 @@ class detailproductState extends State<detailproduct> {
                         child: GestureDetector(
                           onTap: (){
                             print("ahahahaha");
+                            isClickedVideo = true;
                             setState(() {
                               isHiddenControl = isHiddenControl == true ? false : true;
                             });

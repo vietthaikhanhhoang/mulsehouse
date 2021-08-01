@@ -464,7 +464,7 @@ class settingState extends State<setting> with WidgetsBindingObserver {
   }
 
   static const platform =
-      const MethodChannel('flutterplugins.javatpoint.com/enablepush');
+      const MethodChannel('flutterplugins.javatpoint.com/interaction');
   Future<void> enablePush() async {
     //AppSettings.openNotificationSettings();
     // Flutter
